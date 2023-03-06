@@ -1,0 +1,11 @@
+.hrApp {
+    color: #756951;
+    border-style: solid;
+    border-width: 1px;
+ }
+
+ .divCardApp {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+ }

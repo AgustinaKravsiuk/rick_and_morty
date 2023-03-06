@@ -1,0 +1,31 @@
+.inputSearchBar {
+    background-color: #DBD6D0;
+    width: 250px;
+    height: 30px;
+    border-style: solid;
+    border-color: #756951;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.buttonSearchBar {
+    background-color: #756951;
+    color:#DBD6D0;
+    width: 70px;
+    height: 30px;
+    margin: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+.buttonSearchBar:hover {
+    background-color: #DBD6D0;
+    color:#756951;
+    border-color:#756951;
+}
+
+.divSearchBar {
+    display: flex;
+    justify-content: center;
+}

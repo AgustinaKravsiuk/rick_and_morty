@@ -1,0 +1,45 @@
+.divCard {
+    background-color: #DBD6D0;
+    width: 300px;
+    height: 500px;
+    border-style: double;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: #756951;
+    box-shadow: 0px 0px 20px 20px rgba(252, 250, 251, 0.3);
+}
+
+.buttonCardContainer {
+    width: 100%;
+    position: relative;
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.buttonCard {
+    background-color: #756951;
+    color:#DBD6D0;
+    border-color: transparent;
+    border-radius: 6px;
+    border-width: 2px;
+    margin: 7px;
+}
+
+.buttonCard:hover {
+    background-color: #DBD6D0;
+    color:#756951;
+    border-color:#756951;
+}
+
+.characterImagenCard {
+    border-radius: 20px;
+}
+
+.nameCard {
+    margin: 10px;
+}
+
+.speciesGenderCard {
+    display: flex;
+    justify-content: space-evenly;
+}

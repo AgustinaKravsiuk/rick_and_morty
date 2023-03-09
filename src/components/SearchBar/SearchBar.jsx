@@ -1,12 +1,17 @@
-import { useRef } from "react";
+import { useState } from "react";
 import styles from './SearchBar.module.css';
 
 export default function SearchBar(props) {
-   let searchID = useRef(null);
+   const [character, setCharacter] = useState("")
+   
+   function handleInputChange(event) {
+      setCharacter(event.target.value)
+   }
+
    return (
       <div className={styles.divSearchBar}>
-         <input type='search' ref={searchID} className={styles.inputSearchBar}/>
-         <button onClick={() => props.onSearch(searchID.current.value)} className={styles.buttonSearchBar}>Agregar</button>
+         <input type='search' className={styles.inputSearchBar} onChange={handleInputChange}/>
+         <button onClick={() => props.onSearch(character)} className={styles.buttonSearchBar}>Agregar</button>
       </div>
    );
 }

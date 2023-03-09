@@ -1,34 +1,49 @@
 import './App.css'
-import Card from './components/Card/Card.jsx'
 import Cards from './components/Cards/Cards.jsx'
-import SearchBar from './components/SearchBar/SearchBar.jsx'
-import characters, { Rick } from './data.js'
-import styles from './App.module.css'
+import Nav from './components/Nav/Nav.jsx'
+import { useState } from 'react'
 
 function App () {
+  const [characters, setCharacters] = useState ([])
+//   const example = {
+//     name: 'Morty Smith',
+//     species: 'Human',
+//     gender: 'Male',
+//     image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+//  };
+
+function onSearch(character) {
+  fetch(`https://rickandmortyapi.com/api/character/${character}`)
+     .then((response) => response.json())
+     .then((data) => {
+        if (data.name) {
+          console.log('soy el resultado de la buscqeurad', data.id)
+          console.log('data que ya busqu[e> ', characters)
+          const existe = characters.map((char) => char.id === data.id)
+          console.log('existe_', existe)
+          setCharacters((oldChars) => [...oldChars, data]);
+        } else {
+           window.alert('No hay personajes con ese ID');
+        }
+     });
+}
+
+function onClose(id){
+  const filtered = characters.filter((character) => character.id !== Number(id));
+  setCharacters(filtered)
+}
+
   return (
-    <div className='App' style={{ padding: '25px' }}>
-      <div className={styles.divCardApp}>
-        <Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-        />
-      </div>
-      <hr className={styles.hrApp}/>
+    <div className='App'>
+      <nav>
+        <Nav onSearch={onSearch}></Nav>
+      </nav>
       <div>
         <Cards
-          characters={characters}
+          characters={characters} onClose={onClose}
         />
       </div>
-      <hr className={styles.hrApp} />
-      <div>
-        <SearchBar
-          onSearch={(characterID) => window.alert(characterID)}
-        />
-      </div>
+
     </div>
   )
 }

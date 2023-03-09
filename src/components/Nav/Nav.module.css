@@ -1,0 +1,5 @@
+.navBar {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+}

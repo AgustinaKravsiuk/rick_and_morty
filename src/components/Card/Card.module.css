@@ -1,12 +1,17 @@
 .divCard {
-    background-color: #DBD6D0;
+    background-color: rgba(255, 255, 255, 0.5);
     width: 300px;
-    height: 500px;
+    height: 350px;
+    margin: 25px;
     border-style: double;
     border-radius: 20px;
     border-width: 10px;
-    border-color: #756951;
+    border-color: #0c1845;
+}
+
+.divCard:hover{
     box-shadow: 0px 0px 20px 20px rgba(252, 250, 251, 0.3);
+    background: #ccd0e1;
 }
 
 .buttonCardContainer {
@@ -17,8 +22,8 @@
 }
 
 .buttonCard {
-    background-color: #756951;
-    color:#DBD6D0;
+    background-color: #0c1845;
+    color: #ccd0e1;
     border-color: transparent;
     border-radius: 6px;
     border-width: 2px;
@@ -26,17 +31,21 @@
 }
 
 .buttonCard:hover {
-    background-color: #DBD6D0;
-    color:#756951;
-    border-color:#756951;
+    background-color: #ccd0e1;
+    color:#0c1845;
+    border-color:#0c1845;
+    cursor: pointer;
 }
 
 .characterImagenCard {
-    border-radius: 20px;
+    border-radius: 250px;
+    height: 200px;
+    width: 200px;
 }
 
 .nameCard {
-    margin: 10px;
+    margin: 5px;
+    margin-top: 0px;
 }
 
 .speciesGenderCard {

@@ -1,0 +1,40 @@
+.divDetail {
+    color:#0c1845;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-style: double;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: #0c1845;
+    width: fit-content;
+    padding: 15px;
+    display: inline-block;
+}
+
+.divDetail:hover{
+    box-shadow: 0px 0px 20px 20px rgba(252, 250, 251, 0.3);
+    background: #ccd0e1;
+}
+
+.buttonGoBack {
+    background-color: #0c1845;
+    color:#ccd0e1;
+    width: 70px;
+    height: 30px;
+    margin: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+.buttonGoBack:hover {
+    background-color: #ccd0e1;
+    color:#0c1845;
+    border-color:#0c1845;
+    cursor: pointer;
+}
+
+.imageDetail {
+    border-radius: 250px;
+    height: 200px;
+    width: 200px;
+}

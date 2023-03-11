@@ -2,15 +2,12 @@ import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import About from './components/About/About.jsx'
+import Detail from './components/Detail/Detail.jsx'
 
 function App () {
   const [characters, setCharacters] = useState ([])
-//   const example = {
-//     name: 'Morty Smith',
-//     species: 'Human',
-//     gender: 'Male',
-//     image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-//  };
 
 function onSearch(character) {
   fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -35,15 +32,16 @@ function onClose(id){
 
   return (
     <div className='App'>
-      <nav>
-        <Nav onSearch={onSearch}></Nav>
-      </nav>
-      <div>
-        <Cards
+      <Nav onSearch={onSearch}></Nav>
+      <Routes>
+        <Route path='/about' element={<About/>} />
+        <Route path='/home' element={
+          <Cards
           characters={characters} onClose={onClose}
         />
-      </div>
-
+        } />
+        <Route path='/detail/:detailId' element={<Detail/>} />
+      </Routes>     
     </div>
   )
 }

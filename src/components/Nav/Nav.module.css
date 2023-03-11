@@ -3,3 +3,23 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.active {
+    color: #edb1f1;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 7px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.disable {
+    color: #ccd0e1;
+    font-size: large;
+    font-weight: bold;
+    margin: 7px;
+    text-decoration: none;
+    display:flex;
+    justify-content: flex-start;
+}

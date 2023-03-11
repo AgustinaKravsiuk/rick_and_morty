@@ -5,10 +5,10 @@ export default function Cards(props) {
    const { characters } = props;
    return (
       <div className={styles.divCards}>
-         {characters.map(({id, name, species, gender, image}) => 
+         {characters.map(({id, name, species, gender, image,}) => 
          <div className='cards-container' key={id}>
              <Card
-               name={name} species={species} gender={gender} image={image} onClose={() => props.onClose(id)}
+               id={id} name={name} species={species} gender={gender} image={image} onClose={() => props.onClose(id)}
              /> 
          </div>)}
       </div>

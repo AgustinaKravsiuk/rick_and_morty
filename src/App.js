@@ -1,39 +1,56 @@
 import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
-import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import About from './components/About/About.jsx'
 import Detail from './components/Detail/Detail.jsx'
+import Form from './components/Form/Form'
 
 function App () {
-  const [characters, setCharacters] = useState ([])
+  const [characters, setCharacters] = useState ([]);
+  const [access, setAccess] = useState(false);
+  const  username = "prueba@prueba.com";
+  const password = "p4ssw0rd";
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
 
 function onSearch(character) {
   fetch(`https://rickandmortyapi.com/api/character/${character}`)
      .then((response) => response.json())
      .then((data) => {
         if (data.name) {
-          console.log('soy el resultado de la buscqeurad', data.id)
-          console.log('data que ya busqu[e> ', characters)
           const existe = characters.map((char) => char.id === data.id)
-          console.log('existe_', existe)
           setCharacters((oldChars) => [...oldChars, data]);
         } else {
            window.alert('No hay personajes con ese ID');
         }
      });
-}
+};
 
 function onClose(id){
   const filtered = characters.filter((character) => character.id !== Number(id));
-  setCharacters(filtered)
-}
+  setCharacters(filtered);
+};
+
+function login(userData) {
+  if(username === userData.username && password === userData.password) {
+    setAccess(true);
+    navigate("/home");
+  } else {
+    alert("Datos incorrectos")
+  }
+};
 
   return (
     <div className='App'>
-      <Nav onSearch={onSearch}></Nav>
+      {location.pathname !== "/" ? <Nav onSearch={onSearch}/> : null}
       <Routes>
+      <Route path='/' element={<Form login={login}/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/home' element={
           <Cards

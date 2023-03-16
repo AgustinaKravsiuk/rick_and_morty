@@ -23,6 +23,7 @@ export default function Detail() {
       }, [detailId]);
 
     return (
+      <div className={styles.detailContainer}>
         <div className={styles.divDetail}>
             <Link to="/home">
                 <button className={styles.buttonGoBack}>Go back</button>
@@ -35,5 +36,6 @@ export default function Detail() {
             <img src={character.image} alt={character.name} className={styles.imageDetail}/>
 
         </div>
+      </div>
     )
 };

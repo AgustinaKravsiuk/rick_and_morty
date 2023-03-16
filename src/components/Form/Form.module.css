@@ -1,0 +1,49 @@
+.buttonForm {
+    background-color: #0c1845;
+    color:#ccd0e1;
+    width: 70px;
+    height: 30px;
+    margin: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+.buttonForm:hover {
+    background-color: #ccd0e1;
+    color:#0c1845;
+    border-color:#0c1845;
+    cursor: pointer;
+}
+
+.inputForm {
+    background-color: #ccd0e1;
+    width: 250px;
+    height: 30px;
+    border-style: solid;
+    border-color: #0c1845;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.divForm {
+    color: #0c1845;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: auto;
+    height: auto;
+    margin: 25px;
+    border-style: double;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: #0c1845;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+.error {
+    color: red;
+    font-weight: bold;
+    margin: 5px;
+}

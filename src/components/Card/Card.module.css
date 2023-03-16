@@ -1,13 +1,14 @@
 .divCard {
     color: #0c1845;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 300px;
-    height: 350px;
-    margin: 25px;
+    width: 370px;
+    height: 370px;
+    margin: 30px;
     border-style: double;
     border-radius: 20px;
     border-width: 10px;
     border-color: #0c1845;
+    
 }
 
 .divCard:hover{
@@ -52,4 +53,9 @@
 .speciesGenderCard {
     display: flex;
     justify-content: space-evenly;
+}
+
+.link {
+    color: #0c1845;
+    text-decoration: none;
 }

@@ -1,11 +1,17 @@
 .navBar {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    border-bottom: solid;
+    border-color: #0c1845;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100%;
 }
 
 .active {
-    color: #edb1f1;
+    color: #0c1845;
     font-size: large;
     font-weight: bold;
     text-decoration: none;
@@ -15,7 +21,7 @@
 }
 
 .disable {
-    color: #ccd0e1;
+    color: rgba(255, 255, 255, 0.715);
     font-size: large;
     font-weight: bold;
     margin: 7px;

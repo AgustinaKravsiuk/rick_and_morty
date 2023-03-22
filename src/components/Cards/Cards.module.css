@@ -22,7 +22,6 @@
     right: 0;
     margin: auto;
     overflow-x: auto;
-    scrollbar-color: red;
     scrollbar-gutter:initial;
     scrollbar-width: 20px;
 }

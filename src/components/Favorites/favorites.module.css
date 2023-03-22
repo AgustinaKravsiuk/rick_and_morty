@@ -1,0 +1,27 @@
+.favConteiner {
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: #0c1845;
+    width: 1500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    overflow-x: auto;
+    scrollbar-gutter:initial;
+    scrollbar-width: 20px;
+}
+
+.divFav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

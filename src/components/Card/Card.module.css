@@ -1,7 +1,7 @@
 .divCard {
     color: #0c1845;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 370px;
+    width: 270px;
     height: 370px;
     margin: 30px;
     border-style: double;
@@ -58,4 +58,13 @@
 .link {
     color: #0c1845;
     text-decoration: none;
+}
+
+.buttonFav {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 6px;
+    border-width: 2px;
+    margin: 7px;
+    font-size: large;
 }

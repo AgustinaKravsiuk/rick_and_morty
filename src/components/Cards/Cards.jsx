@@ -6,7 +6,7 @@ export default function Cards(props) {
    return (
       <div className={styles.cardsContainer}>
          <div className={styles.divCards}>
-            {characters.map(({id, name, species, gender, image,}) => 
+            {characters.map(({id, name, species, gender, image, onClose}) => 
             <div key={id}>
                <Card
                   id={id} name={name} species={species} gender={gender} image={image} onClose={() => props.onClose(id)}
